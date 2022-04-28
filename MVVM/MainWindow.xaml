@@ -6,7 +6,29 @@
         xmlns:local="clr-namespace:MVVM"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    
     <Grid>
-        <TextBlock  Text="Hello"></TextBlock>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400" ></ColumnDefinition>
+            <ColumnDefinition Width="400"  ></ColumnDefinition>
+
+
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="grid"   AutoGenerateColumns="False" Grid.Column="0" >
+            <DataGrid.Columns >
+                <DataGridTextColumn x:Name="t1" Header="Модель" Binding="{Binding Path=Model}"   ></DataGridTextColumn>
+                <DataGridTextColumn x:Name="t2" Header="Компания" Binding="{Binding Path=Company}"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="t3" Header="Дата Создания" Binding="{Binding Path=CreateDate}"></DataGridTextColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Button  Grid.Column="1" Content="Save"  Margin="227,47,10,331" Click="Button_Click"  FontSize="20" Background="#42f554 " />
+
+
+
+        <Button Content="Delete" Grid.Column="1" HorizontalAlignment="Left" FontSize="20" Margin="227,0,0,0" VerticalAlignment="Top" Width="163" Height="42" Background="#ed1c1c" Click="Button_Click_1"/>
+
+
     </Grid>
+
 </Window>
