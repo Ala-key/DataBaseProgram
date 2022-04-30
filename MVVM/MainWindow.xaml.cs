@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.Entity;
@@ -22,25 +23,30 @@ namespace MVVM
     /// </summary>
     public partial class MainWindow : Window
     {
-        ModileDB db;
+         ModileDB db;
+
+        
+       
         public MainWindow()
         {
             InitializeComponent();
 
+
             db = new ModileDB();
+
+
 
             db.Phones.Load();
 
 
 
-          
-
-
-
-
-            
 
             grid.ItemsSource = db.Phones.Local.ToBindingList();
+
+
+
+
+
             this.Closing += MainWindow_Closing;
         }
 

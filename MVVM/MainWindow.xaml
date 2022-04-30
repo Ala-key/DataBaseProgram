@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="400" ></ColumnDefinition>
@@ -14,7 +15,7 @@
 
 
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="grid"   AutoGenerateColumns="False" Grid.Column="0" >
+        <DataGrid x:Name="grid"   AutoGenerateColumns="False" Grid.Column="0"   >
             <DataGrid.Columns >
                 <DataGridTextColumn x:Name="t1" Header="Модель" Binding="{Binding Path=Model}"   ></DataGridTextColumn>
                 <DataGridTextColumn x:Name="t2" Header="Компания" Binding="{Binding Path=Company}"></DataGridTextColumn>
@@ -22,11 +23,12 @@
             </DataGrid.Columns>
 
         </DataGrid>
-        <Button  Grid.Column="1" Content="Save"  Margin="227,47,10,331" Click="Button_Click"  FontSize="20" Background="#42f554 " />
+        <Button  Grid.Column="1" Content="Save"  Margin="227,376,10,0"   FontSize="20" Background="#42f554 "  Click="Button_Click"/>
 
 
 
-        <Button Content="Delete" Grid.Column="1" HorizontalAlignment="Left" FontSize="20" Margin="227,0,0,0" VerticalAlignment="Top" Width="163" Height="42" Background="#ed1c1c" Click="Button_Click_1"/>
+        <Button Content="Delete" Grid.Column="1" Click="Button_Click_1" HorizontalAlignment="Left" FontSize="20" Margin="0,378,0,0" VerticalAlignment="Top" Width="163" Height="42" Background="#ed1c1c"/>
+        
 
 
     </Grid>
